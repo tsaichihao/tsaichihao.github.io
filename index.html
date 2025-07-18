@@ -3,142 +3,314 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Archer Tsai 個人形象網站</title>
+    <title>Archer Tsai</title>
     <!-- 引入 Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <!-- 引入 Inter 字體 -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <style>
         body {
             font-family: 'Inter', sans-serif;
             background-color: #f3f4f6; /* 淺灰色背景 */
-            color: #333;
+            color: #374151; /* 深灰色文字 */
         }
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 1rem;
+        /* 自定義滾動條樣式 */
+        ::-webkit-scrollbar {
+            width: 8px;
         }
-        .card {
-            background-color: #ffffff;
-            border-radius: 0.75rem; /* 圓角 */
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-            padding: 2rem;
-            margin-bottom: 1.5rem;
+        ::-webkit-scrollbar-track {
+            background: #e0e0e0;
+            border-radius: 10px;
         }
-        .section-title {
-            font-size: 1.875rem; /* text-3xl */
-            font-weight: 700; /* font-bold */
-            color: #1f2937; /* 深灰色 */
-            margin-bottom: 1.5rem;
-            border-bottom: 2px solid #e5e7eb; /* 淺灰色底部邊框 */
-            padding-bottom: 0.5rem;
+        ::-webkit-scrollbar-thumb {
+            background: #888;
+            border-radius: 10px;
         }
-        .job-title {
-            font-size: 1.25rem; /* text-xl */
-            font-weight: 600; /* font-semibold */
-            color: #374151; /* 中灰色 */
-        }
-        .company-name {
-            font-size: 1.125rem; /* text-lg */
-            color: #4b5563; /* 較淺的灰色 */
-            margin-top: 0.25rem;
-        }
-        .description-list li {
-            margin-bottom: 0.5rem;
+        ::-webkit-scrollbar-thumb:hover {
+            background: #555;
         }
     </style>
 </head>
 <body class="antialiased">
-    <div class="container">
-        <!-- 導航欄 (可選，目前留空) -->
-        <nav class="py-4 px-6 flex justify-between items-center bg-white rounded-xl shadow-md mb-6">
-            <h1 class="text-3xl font-bold text-gray-800">Archer Tsai</h1>
-            <!-- 未來可在此處添加導航連結 -->
-            <div>
-                <!-- <a href="#about" class="text-gray-600 hover:text-blue-600 mx-2">關於我</a>
-                <a href="#experience" class="text-gray-600 hover:text-blue-600 mx-2">工作經驗</a>
-                <a href="#skills" class="text-gray-600 hover:text-blue-600 mx-2">專業技能</a> -->
-            </div>
+    <div class="container mx-auto p-4 sm:p-6 lg:p-8">
+        <!-- 導航欄 (可選，如果未來有更多頁面) -->
+        <nav class="bg-white shadow-md rounded-lg p-4 mb-8 flex justify-between items-center">
+            <h1 class="text-2xl font-bold text-indigo-700">Archer Tsai</h1>
+            <!-- 您可以在這裡添加導航連結 -->
+            <!-- <div class="space-x-4">
+                <a href="#about" class="text-gray-700 hover:text-indigo-600 font-medium">關於我</a>
+                <a href="#expertise" class="text-gray-700 hover:text-indigo-600 font-medium">專業領域</a>
+                <a href="#career" class="text-gray-700 hover:text-indigo-600 font-medium">職涯歷程</a>
+                <a href="#contact" class="text-gray-700 hover:text-indigo-600 font-medium">聯繫我</a>
+            </div> -->
         </nav>
 
-        <!-- 簡介區塊 -->
-        <section id="introduction" class="card text-center">
-            <h2 class="text-4xl font-extrabold text-gray-900 mb-4">Archer Tsai</h2>
-            <p class="text-xl text-gray-700 mb-6">群馥科技股份有限公司 Sr. Site Reliability Engineer</p>
-            <blockquote class="text-lg italic text-gray-600 border-l-4 border-blue-500 pl-4 py-2">
-                「人才的分佈是金字塔式，與其抱怨金字塔底端為什麼這麼寬，不如努力提升自己的專業知識、工作技能和技術視野，哪怕只是前進了一小步，我們也超越了最寬的底部。」
-            </blockquote>
-        </section>
-
-        <!-- 關於我區塊 -->
-        <section id="about" class="card">
-            <h2 class="section-title">關於我</h2>
-            <p class="text-gray-700 leading-relaxed mb-4">
-                您好，我是Archer Tsai，從事 IT 維運崗位累積超過20年的實戰經驗，職涯歷練過 IT Infrastructure、NoSQL DBA、AI Engineer 、 DevOps Engineer 、OP Architect、 Cloud Architect 、Sr. SRE 等職務，從地端到雲端，從單體式系統到微服務架構有完整的歷練。
-            </p>
-            <p class="text-gray-700 leading-relaxed mb-4">
-                曾任職於北美第二大 3C 跨境電商位 (newegg.com) 位於台灣技術團隊擔任 Architect 一職，有帶領 TW Pre-Architect Team 和 TW DBA Team 的管理經驗。Newegg 在美國、台北、上海、成都、西安等地都設有技術團隊辦公室，專案的進行需與各地的技術團隊協同合作，具備有跨國、跨團隊的合作溝通協調能力。
-            </p>
-            <p class="text-gray-700 leading-relaxed mb-4">
-                曾任職統一資訊擔任 Cloud Architect 一職，主要負責地端服務上雲( GCP ) 以及新專案的架構規劃、建置、維運、效能優化、成本優化、異常問題排除等工作。與商城(mall.iopenmall.tw)、數據中心、AI、物流中心等開發團隊在協作上積極且有效率推動專案的進度。
-            </p>
-        </section>
-
-        <!-- 工作經驗區塊 -->
-        <section id="experience" class="card">
-            <h2 class="section-title">工作經驗</h2>
-
-            <div class="mb-6">
-                <h3 class="job-title">資深 SRE 工程師</h3>
-                <p class="company-name">群馥科技股份有限公司 <span class="text-sm text-gray-500">(現職)</span></p>
-                <ul class="list-disc list-inside text-gray-700 mt-2 description-list">
-                    <li>主要負責 On-Premises 地端伺服器、AWS outpost 與 AWS local zone 、 GCP 的架構規劃、建置、維運。</li>
-                    <li>負責 GitLab CI/CD 、Terraform 、 shell script 、 Ansible 自動化腳本撰寫。</li>
-                    <li>負責效能優化、成本優化、監控告警系統建置 、異常問題排除等工作。</li>
-                    <li>確保基礎架構和所有服務的整體性能和可靠性。</li>
-                </ul>
-            </div>
-
-            <div class="mb-6">
-                <h3 class="job-title">Cloud Architect</h3>
-                <p class="company-name">統一資訊</p>
-                <ul class="list-disc list-inside text-gray-700 mt-2 description-list">
-                    <li>主要負責地端服務上雲( GCP )。</li>
-                    <li>負責新專案的架構規劃、建置、維運、效能優化、成本優化、異常問題排除等工作。</li>
-                    <li>與商城(mall.iopenmall.tw)、數據中心、AI、物流中心等開發團隊積極且有效率推動專案進度。</li>
-                </ul>
-            </div>
-
-            <div>
-                <h3 class="job-title">Architect (TW Pre-Architect Team Lead & TW DBA Team Lead)</h3>
-                <p class="company-name">Newegg.com (北美第二大 3C 跨境電商)</p>
-                <ul class="list-disc list-inside text-gray-700 mt-2 description-list">
-                    <li>有帶領 TW Pre-Architect Team 和 TW DBA Team 的管理經驗。</li>
-                    <li>具備有跨國、跨團隊的合作溝通協調能力，與美國、台北、上海、成都、西安等地技術團隊協同合作。</li>
-                </ul>
+        <!-- 1. 關於我 -->
+        <section id="about" class="bg-white shadow-md rounded-lg p-6 mb-8">
+            <h2 class="text-3xl font-semibold text-gray-800 mb-4 border-b-2 border-indigo-500 pb-2">關於我</h2>
+            <div class="space-y-4">
+                <!-- 開場白：您的座右銘 -->
+                <blockquote class="text-xl italic text-gray-600 border-l-4 border-indigo-500 pl-4">
+                    "人才的分佈是金字塔式，與其抱怨金字塔底端為什麼這麼寬，不如努力提升自己的專業知識、工作技能和技術視野，哪怕只是前進了一小步，我們也超越了最寬的底部。"
+                </blockquote>
+                <!-- 部落格宗旨 -->
+                <div>
+                    <h3 class="text-2xl font-medium text-gray-700 mb-2">部落格宗旨</h3>
+                    <p class="text-gray-600 leading-relaxed">
+                        這個部落格是一個分享我對於技術的熱情、經驗和見解的平台。我目前專注於網站可靠性工程 (SRE)、開發運維 (DevOps) 和雲端架構師領域。
+                        我希望透過這裡的分享，能夠回饋技術社群，激發更多有意義的討論，同時也作為我個人學習和成長的紀錄。
+                        這裡不是一份求職履歷，而是我對技術世界的探索與思考。
+                    </p>
+                </div>
+                <!-- 個人理念 -->
+                <div>
+                    <h3 class="2xl font-medium text-gray-700 mb-2">個人理念</h3>
+                    <p class="text-gray-600 leading-relaxed">
+                        我深信在現代複雜的軟體系統中，可靠性是基石，自動化是提升效率的關鍵，而持續改進則是我們不斷前進的動力。
+                        我致力於建立穩定、高效且可擴展的系統，並透過自動化減少重複性工作，讓團隊能更專注於創新。
+                        我相信開放、協作和不斷學習是技術人成長的必經之路。
+                    </p>
+                </div>
             </div>
         </section>
 
-        <!-- 學歷區塊 -->
-        <section id="education" class="card">
-            <h2 class="section-title">學歷</h2>
-            <h3 class="job-title">碩士畢業</h3>
-            <p class="company-name">國立彰化師範大學資訊管理學系所</p>
+        <!-- 2. 我的專業領域 -->
+        <section id="expertise" class="bg-white shadow-md rounded-lg p-6 mb-8">
+            <h2 class="text-3xl font-semibold text-gray-800 mb-4 border-b-2 border-indigo-500 pb-2">我的專業領域</h2>
+
+            <!-- 2.1 網站可靠性工程 (Site Reliability Engineering, SRE) -->
+            <div class="mb-8 p-4 bg-gray-50 rounded-lg shadow-inner">
+                <h3 class="text-2xl font-medium text-gray-700 mb-3 border-b border-gray-300 pb-2">網站可靠性工程 (Site Reliability Engineering, SRE)</h3>
+                <div class="space-y-3">
+                    <p class="text-gray-600 leading-relaxed">
+                        我對 SRE 的理解是，它不僅僅是一套工具或職責，更是一種文化和工程實踐，旨在平衡軟體開發的速度與系統的可靠性。
+                        透過將運維問題視為軟體工程問題來解決，我們能夠建立更穩定、可預測的系統。
+                    </p>
+                    <h4 class="text-xl font-medium text-gray-700">關鍵原則與實踐：</h4>
+                    <ul class="list-disc list-inside text-gray-600 space-y-1">
+                        <li>**服務等級指標 (SLI) 與服務等級目標 (SLO)：** 定義、監控並達成關鍵服務指標，確保服務品質。</li>
+                        <li>**錯誤預算 (Error Budgets)：** 運用錯誤預算管理風險，允許創新同時確保可靠性底線。</li>
+                        <li>**減少瑣事 (Toil Reduction) 與自動化：** 透過自動化消除重複性、手動且無附加價值的工作。</li>
+                        <li>**監控與告警：** 建立全面且有效的監控系統，實現及時告警與問題預防。</li>
+                        <li>**事件響應與事後檢討 (Post-mortem)：** 快速響應生產事件，並從中學習以防止未來再次發生。</li>
+                        <li>**混沌工程 (Chaos Engineering)：** 主動在生產環境中引入故障，以測試系統的韌性。</li>
+                    </ul>
+                    <h4 class="text-xl font-medium text-gray-700">常用工具與技術：</h4>
+                    <p class="text-gray-600">
+                        Prometheus, Grafana, ELK Stack (Elasticsearch, Logstash, Kibana), PagerDuty, Opsgenie 等。
+                    </p>
+                    <h4 class="text-xl font-medium text-gray-700">實例分享：</h4>
+                    <p class="text-gray-600 italic">
+                        (此處可分享您如何應用 SRE 原則解決實際問題或提升系統可靠性的具體案例，例如：
+                        「曾透過建立自動化告警與儀表板，將某服務的平均故障恢復時間 (MTTR) 縮短 30%。
+                        或「設計並實施了基於錯誤預算的發布策略，有效平衡了新功能上線速度與系統穩定性。」)
+                    </p>
+                </div>
+            </div>
+
+            <!-- 2.2 開發運維 (DevOps) -->
+            <div class="mb-8 p-4 bg-gray-50 rounded-lg shadow-inner">
+                <h3 class="text-2xl font-medium text-gray-700 mb-3 border-b border-gray-300 pb-2">開發運維 (DevOps)</h3>
+                <div class="space-y-3">
+                    <p class="text-gray-600 leading-relaxed">
+                        DevOps 對我而言是一種文化和方法論，它強調開發與運維團隊之間的緊密協作、溝通和自動化，
+                        旨在加速軟體交付，同時確保品質和穩定性。
+                    </p>
+                    <h4 class="text-xl font-medium text-gray-700">持續整合 (CI) 與持續交付/部署 (CD)：</h4>
+                    <ul class="list-disc list-inside text-gray-600 space-y-1">
+                        <li>**CI/CD 管道的建立與優化：** 設計並實施自動化的程式碼建構、測試和部署流程。</li>
+                        <li>**工具：** Jenkins, GitLab CI/CD, GitHub Actions, Azure DevOps Pipelines 等。</li>
+                    </ul>
+                    <h4 class="text-xl font-medium text-gray-700">基礎設施即程式碼 (Infrastructure as Code, IaC)：</h4>
+                    <ul class="list-disc list-inside text-gray-600 space-y-1">
+                        <li>**IaC 的優勢：** 透過程式碼管理基礎設施，實現環境的一致性、可重複性和版本控制。</li>
+                        <li>**工具：** Terraform, Ansible, CloudFormation 等。</li>
+                    </ul>
+                    <h4 class="text-xl font-medium text-gray-700">容器化與容器編排：</h4>
+                    <ul class="list-disc list-inside text-gray-600 space-y-1">
+                        <li>**Docker：** 應用容器化技術，實現應用程式的輕量級封裝與部署。</li>
+                        <li>**Kubernetes：** 運用容器編排平台，管理、擴展和自動化容器化應用程式。</li>
+                        <li>**Helm：** 使用 Helm 管理 Kubernetes 應用程式的複雜部署。</li>
+                    </ul>
+                    <h4 class="text-xl font-medium text-gray-700">協作與溝通：</h4>
+                    <p class="text-gray-600">
+                        我強調跨職能團隊間的開放溝通和共享責任，這對於實現快速、可靠的軟體交付至關重要。
+                    </p>
+                </div>
+            </div>
+
+            <!-- 2.3 雲端架構師 (Cloud Architect) -->
+            <div class="p-4 bg-gray-50 rounded-lg shadow-inner">
+                <h3 class="text-2xl font-medium text-gray-700 mb-3 border-b border-gray-300 pb-2">雲端架構師 (Cloud Architect)</h3>
+                <div class="space-y-3">
+                    <p class="text-gray-600 leading-relaxed">
+                        作為雲端架構師，我負責設計、規劃和實施基於雲端的解決方案，以滿足業務需求並優化性能、成本和安全性。
+                    </p>
+                    <h4 class="text-xl font-medium text-gray-700">多雲/混合雲經驗：</h4>
+                    <p class="text-gray-600">
+                        我具備在主要雲端服務供應商 (例如 AWS, Azure, GCP) 的實務經驗，並對多雲或混合雲策略有深入理解，能夠根據業務需求選擇最適合的雲端環境。
+                    </p>
+                    <h4 class="text-xl font-medium text-gray-700">雲端解決方案設計：</h4>
+                    <ul class="list-disc list-inside text-gray-600 space-y-1">
+                        <li>**可擴展性與彈性：** 設計能夠自動擴展和縮減以應對流量變化的架構。</li>
+                        <li>**高可用性與災難復原：** 確保系統在面對故障時仍能持續運作，並具備有效的災難復原策略。</li>
+                        <li>**安全性與合規性：** 在雲端環境中實施嚴格的安全控制和符合行業規範的解決方案。</li>
+                        <li>**成本優化：** 設計具成本效益的雲端架構，避免不必要的資源浪費。</li>
+                    </ul>
+                    <h4 class="text-xl font-medium text-gray-700">雲端服務應用：</h4>
+                    <ul class="list-disc list-inside text-gray-600 space-y-1">
+                        <li>**無伺服器計算 (Serverless Computing)：** 應用 Lambda, Azure Functions, Cloud Functions 等技術。</li>
+                        <li>**微服務架構：** 設計和部署基於微服務的雲端應用程式。</li>
+                        <li>**資料儲存解決方案：** 熟悉各種雲端資料庫 (RDS, DynamoDB, Cosmos DB 等) 和物件儲存 (S3, Blob Storage 等)。</li>
+                        <li>**網路與安全：** 雲端網路設計 (VPC, VNet), 防火牆配置, 身份與存取管理 (IAM) 等。</li>
+                    </ul>
+                    <h4 class="text-xl font-medium text-gray-700">雲端認證：</h4>
+                    <p class="text-gray-600 italic">
+                        (如果有的話，請在此處列出您的相關雲端認證，例如：AWS Certified Solutions Architect - Professional, Microsoft Certified: Azure Solutions Architect Expert 等。)
+                    </p>
+                </div>
+            </div>
         </section>
 
-        <!-- 聯絡方式區塊 (可添加實際聯絡資訊) -->
-        <section id="contact" class="card text-center">
-            <h2 class="section-title">聯絡我</h2>
-            <p class="text-gray-700 mb-4">如果您對我的經驗和技能感興趣，歡迎隨時與我聯繫。</p>
-            <p class="text-gray-700">
-                <!-- 這裡可以放置您的電子郵件、LinkedIn或其他聯絡方式 -->
-                <!-- 範例：Email: <a href="mailto:your.email@example.com" class="text-blue-600 hover:underline">your.email@example.com</a> -->
-            </p>
+        <!-- 3. 我的職涯歷程 -->
+        <section id="career" class="bg-white shadow-md rounded-lg p-6 mb-8">
+            <h2 class="text-3xl font-semibold text-gray-800 mb-4 border-b-2 border-indigo-500 pb-2">我的職涯歷程</h2>
+            <div class="space-y-4">
+                <p class="text-gray-600 leading-relaxed">
+                    我的職涯歷程讓我累積了廣泛的技術經驗，這些經驗為我目前在 SRE、DevOps 和雲端架構領域的專長奠定了堅實的基礎。
+                    我深信，多元的職務背景讓我能從不同角度理解系統的挑戰與需求。
+                </p>
+                <!-- 職務演進與技能轉移 -->
+                <div>
+                    <h3 class="text-2xl font-medium text-gray-700 mb-2">職務演進與技能轉移</h3>
+                    <p class="text-gray-600 leading-relaxed">
+                        我的職涯並非單一線性發展，而是透過在不同角色中的學習與實踐，不斷累積和轉移技能。
+                        從早期的開發工作到後來的系統與網路管理，這些經驗讓我對軟體生命週期的每個環節都有了深刻的理解。
+                        例如，作為軟體開發工程師的經驗，讓我能從程式碼層面理解應用程式的行為和潛在問題，這對 SRE 和 DevOps 的故障排除和性能優化至關重要。
+                        而系統管理和網路工程的背景，則為我建立了紮實的基礎設施和網路知識，使我能夠設計更穩健的雲端架構。
+                    </p>
+                </div>
+                <!-- 職務範例 -->
+                <div>
+                    <h3 class="text-2xl font-medium text-gray-700 mb-2">職務範例：</h3>
+                    <ul class="list-disc list-inside text-gray-600 space-y-2">
+                        <li>
+                            **軟體開發工程師：**
+                            <p class="ml-4">
+                                參與應用程式的設計與開發，熟悉程式碼品質、版本控制和測試流程。這段經歷讓我理解開發者的痛點，並在SRE/DevOps工作中能更好地與開發團隊協作。
+                            </p>
+                        </li>
+                        <li>
+                            **系統管理員/網路工程師：**
+                            <p class="ml-4">
+                                負責伺服器、網路設備的部署、配置與維護，處理系統故障和性能問題。這讓我對底層基礎設施的運作有深入的了解，為雲端架構設計打下基礎。
+                            </p>
+                        </li>
+                        <li>
+                            **資料庫管理員 (DBA)：**
+                            <p class="ml-4">
+                                負責資料庫的安裝、配置、備份、恢復與性能調優。這段經驗強化了我對資料持久性、高可用性和資料安全性的理解，對於設計可靠的雲端資料解決方案至關重要。
+                            </p>
+                        </li>
+                        <!-- 您可以根據實際情況添加更多職務 -->
+                    </ul>
+                </div>
+                <!-- 連結過去與現在 -->
+                <div>
+                    <h3 class="text-2xl font-medium text-gray-700 mb-2">連結過去與現在：</h3>
+                    <p class="text-gray-600 leading-relaxed">
+                        這些多元的職務經驗讓我能夠從宏觀角度看待整個軟體交付生命週期，並將不同領域的知識融會貫通。
+                        這使我能夠成為一個更全面的 SRE/DevOps/雲端架構師，不僅能解決當前問題，更能預見潛在風險並設計彈性的解決方案。
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- 4. 我的專案與貢獻 (可選) -->
+        <section id="projects" class="bg-white shadow-md rounded-lg p-6 mb-8">
+            <h2 class="text-3xl font-semibold text-gray-800 mb-4 border-b-2 border-indigo-500 pb-2">我的專案與貢獻</h2>
+            <div class="space-y-4">
+                <!-- 個人專案 -->
+                <div>
+                    <h3 class="text-2xl font-medium text-gray-700 mb-2">個人專案</h3>
+                    <p class="text-gray-600 leading-relaxed italic">
+                        (此處可分享您在業餘時間進行的技術專案，例如：
+                        「開發了一個基於 Python 的自動化部署工具，用於簡化內部服務的發布流程。」
+                        或「建立了一個使用 Terraform 和 Ansible 在 AWS 上自動部署 Kubernetes 集群的範例專案。」)
+                    </p>
+                </div>
+                <!-- 開源貢獻 -->
+                <div>
+                    <h3 class="text-2xl font-medium text-gray-700 mb-2">開源貢獻</h3>
+                    <p class="text-gray-600 leading-relaxed italic">
+                        (如果您有參與開源專案，可以在此提及您的貢獻，例如：
+                        「為 XXX 開源專案提交了 YYY 功能的 PR，並參與了 ZZZ Bug 的修復。」)
+                    </p>
+                </div>
+                <!-- 技術文章/演講 -->
+                <div>
+                    <h3 class="text-2xl font-medium text-gray-700 mb-2">技術文章/演講</h3>
+                    <p class="text-gray-600 leading-relaxed italic">
+                        (如果您有撰寫技術文章或在社群中分享經驗，也可以在此列出連結和主題，例如：
+                        「在 XXX 技術部落格發表了《深入理解 Kubernetes 網路策略》一文。」
+                        或「在 YYY 技術研討會上分享了關於『如何實施有效的服務監控』的經驗。」)
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- 5. 持續學習與成長 -->
+        <section id="learning" class="bg-white shadow-md rounded-lg p-6 mb-8">
+            <h2 class="text-3xl font-semibold text-gray-800 mb-4 border-b-2 border-indigo-500 pb-2">持續學習與成長</h2>
+            <div class="space-y-4">
+                <!-- 學習態度 -->
+                <div>
+                    <h3 class="text-2xl font-medium text-gray-700 mb-2">學習態度</h3>
+                    <p class="text-gray-600 leading-relaxed">
+                        技術世界日新月異，我始終保持著對新技術的好奇心和學習的熱情。我相信持續學習是保持競爭力並推動個人成長的關鍵。
+                    </p>
+                </div>
+                <!-- 學習管道 -->
+                <div>
+                    <h3 class="text-2xl font-medium text-gray-700 mb-2">學習管道</h3>
+                    <p class="text-gray-600 leading-relaxed">
+                        我透過多種方式保持技術知識的更新，包括：
+                    </p>
+                    <ul class="list-disc list-inside text-gray-600 space-y-1 ml-4">
+                        <li>閱讀最新的技術部落格、論文和書籍。</li>
+                        <li>參與線上課程和專業認證考試。</li>
+                        <li>參加技術研討會、工作坊和社群聚會。</li>
+                        <li>積極參與開源專案和個人技術實驗。</li>
+                    </ul>
+                </div>
+                <!-- 未來展望 -->
+                <div>
+                    <h3 class="text-2xl font-medium text-gray-700 mb-2">未來展望</h3>
+                    <p class="text-gray-600 leading-relaxed">
+                        我將繼續深耕 SRE、DevOps 和雲端架構領域，特別關注於 FinOps (雲端財務管理)、AIOps (人工智慧運維) 和邊緣計算等新興趨勢。
+                        我期待能夠將這些前沿技術應用於實際問題解決，為企業帶來更大的價值。
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- 6. 聯繫我 -->
+        <section id="contact" class="bg-white shadow-md rounded-lg p-6 mb-8">
+            <h2 class="text-3xl font-semibold text-gray-800 mb-4 border-b-2 border-indigo-500 pb-2">聯繫我</h2>
+            <div class="space-y-4">
+                <p class="text-gray-600 leading-relaxed">
+                    如果您對我的專業領域、職涯歷程或任何技術話題感興趣，歡迎隨時與我聯繫。
+                </p>
+                <!-- 移除了 LinkedIn, GitHub, 電子郵件的連結 -->
+                <p class="text-gray-600">
+                    請透過其他方式聯繫我，例如在技術社群中交流。
+                </p>
+            </div>
         </section>
 
         <!-- 頁腳 -->
-        <footer class="text-center text-gray-500 text-sm py-6">
-            <p>&copy; 2025 Archer Tsai. All rights reserved.</p>
+        <footer class="text-center text-gray-500 text-sm mt-8 p-4">
+            <p>&copy; 2023 Archer Tsai. 版權所有.</p>
         </footer>
     </div>
 </body>
