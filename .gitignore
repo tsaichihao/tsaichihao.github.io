@@ -1,0 +1,20 @@
+# Local source photos retained before website cropping
+assets/photos/*-original.*
+
+# Local review and scratch files
+diff*.txt
+scratch.txt
+
+# Secrets and private credentials
+.env
+.env.*
+*.key
+*.pem
+*.p12
+*.pfx
+*.kdbx
+
+# Private documents and unredacted scans
+*.pdf
+private/
+originals/
