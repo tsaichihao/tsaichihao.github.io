@@ -2,6 +2,12 @@
 
 Personal website hosted with GitHub Pages.
 
+## Site structure
+
+The resume homepage is static HTML/CSS without JavaScript. The independent
+`gallery.html` page uses `photos.json` and the existing local photo tool.
+The homepage currently has no gallery link. Open `gallery.html` directly by URL to view the gallery.
+
 ## Photo management
 
 Photo publishing runs locally and does not ask for or store a GitHub personal
